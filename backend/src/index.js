@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const routes = require('./routes');
 
 // define the Express app
 const app = express();
@@ -20,7 +21,9 @@ app.use(cors());
 // log HTTP requests
 app.use(morgan('combined'));
 
-// start the server
+app.use('/micro-posts', routes);
+
+//start server
 app.listen(8081, () => {
   console.log('listening on port 8081');
 });
