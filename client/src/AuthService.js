@@ -56,8 +56,8 @@ class Auth {
   signOut () {
     // clear id token, profile, and expiration
     this.auth0.logout({
-      clientID: 'r2djismSH6lKfHU4rrEVi578mY1rK9cS',
-      returnTo: '/'
+      clientID: process.env.AUTH0_CLIENT_ID,
+      returnTo: process.env.APP_URL
     })
   }
 }
