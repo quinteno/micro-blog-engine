@@ -57,7 +57,7 @@ class Auth {
     // clear id token, profile, and expiration
     this.auth0.logout({
       clientID: 'r2djismSH6lKfHU4rrEVi578mY1rK9cS',
-      returnTo: 'http://localhost:8080/'
+      returnTo: '/'
     })
   }
 }
